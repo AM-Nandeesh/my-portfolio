@@ -96,6 +96,13 @@ a:hover {
   text-decoration: none;
 }
 
+.sidebar nav a.active {
+  background-color: rgba(255, 255, 255, 0.3);
+  color: #ffffff;
+  border-left: 3px solid #fff9e6;
+  padding-left: calc(1rem - 3px);
+}
+
 /* Main Content Area */
 .main-content {
   flex: 1;
@@ -194,6 +201,56 @@ section li {
   margin-bottom: 0.75rem;
 }
 
+/* Projects Grid */
+.projects-grid {
+  display: grid;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.project-tech {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(102, 126, 234, 0.2);
+}
+
+.project-tech strong {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #764ba2;
+}
+
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tech-tag {
+  background-color: rgba(102, 126, 234, 0.15);
+  color: #667eea;
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.project-impact {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 4px;
+}
+
+.project-impact strong {
+  color: #764ba2;
+}
+
+.project-impact p {
+  margin-top: 0.5rem;
+  color: #555;
+}
+
 /* Contact Info */
 .contact-info {
   background-color: #f9f9f9;
@@ -216,15 +273,141 @@ section li {
   color: #764ba2;
 }
 
+/* Contact Container */
+.contact-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin: 2rem 0;
+}
+
+.contact-item {
+  background-color: #f9f9f9;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid #667eea;
+}
+
+.contact-item h3 {
+  color: #667eea;
+  margin-bottom: 0.5rem;
+}
+
+.contact-item p {
+  color: #555;
+  font-size: 1rem;
+}
+
+.contact-item a {
+  color: #667eea;
+  font-weight: 600;
+}
+
+.contact-item a:hover {
+  color: #764ba2;
+}
+
+.contact-availability {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+.contact-availability h2 {
+  color: #667eea;
+  margin-bottom: 1rem;
+}
+
+.contact-availability ul {
+  list-style: none;
+  margin-left: 0;
+}
+
+.contact-availability li {
+  padding: 0.5rem 0;
+  color: #555;
+  font-size: 1.05rem;
+}
+
+.contact-message {
+  background-color: #f0f0f0;
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 1.05rem;
+  color: #555;
+}
+
 /* Home Section */
 #home {
   text-align: center;
   padding: 2rem 0;
 }
 
-#home p {
+#home h1 {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.home-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.home-content > p {
   font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 2rem;
+  line-height: 1.8;
+}
+
+.home-intro {
+  background-color: #f0f0f0;
+  padding: 2rem;
+  border-radius: 8px;
+  margin: 2rem 0;
+  text-align: left;
+}
+
+.home-intro p {
+  font-weight: 600;
+  color: #667eea;
+  margin-bottom: 1rem;
+}
+
+.home-intro ul {
+  list-style: none;
+  margin-left: 0;
+}
+
+.home-intro li {
+  padding: 0.5rem 0;
+  color: #555;
+  font-size: 1.05rem;
+}
+
+.home-intro li:before {
+  content: "✓ ";
+  color: #667eea;
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+
+.home-highlight {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin: 2rem 0;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.home-cta {
+  font-size: 1.1rem;
   color: #666;
+  margin: 2rem 0;
 }
 
 /* Responsive Design */
@@ -249,6 +432,10 @@ section li {
     font-size: 2rem;
   }
 
+  #home h1 {
+    font-size: 2rem;
+  }
+
   section h2 {
     font-size: 1.4rem;
   }
@@ -261,11 +448,18 @@ section li {
 
   .sidebar nav li {
     margin: 0;
+    flex: 1;
+    min-width: 100px;
   }
 
   .sidebar nav a {
     padding: 0.5rem 1rem;
     font-size: 0.9rem;
+    text-align: center;
+  }
+
+  .contact-container {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -278,6 +472,10 @@ section li {
     font-size: 1.5rem;
   }
 
+  #home h1 {
+    font-size: 1.5rem;
+  }
+
   section h2 {
     font-size: 1.2rem;
   }
@@ -285,5 +483,15 @@ section li {
   .exp-item,
   .project-item {
     padding: 1rem;
+  }
+
+  .home-intro,
+  .home-highlight,
+  .contact-item {
+    padding: 1rem;
+  }
+
+  .sidebar-header p {
+    font-size: 0.8rem;
   }
 }
