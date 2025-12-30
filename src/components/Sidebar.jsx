@@ -15,6 +15,7 @@ export default function Sidebar() {
         <p><a href="mailto:amnandeeshshastri@gmail.com">amnandeeshshastri@gmail.com</a></p>
         <p><a href="https://linkedin.com/in/a-m-nandeesh" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
         <p><a href="https://github.com/AM-Nandeesh" target="_blank" rel="noopener noreferrer">GitHub</a></p>
+        <p><a href="https://leetcode.com/u/am-nandeesh/" target="_blank" rel="noopener noreferrer">LeetCode</a></p>
       </div>
       <nav>
         <ul>
