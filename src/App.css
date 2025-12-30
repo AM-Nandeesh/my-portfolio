@@ -1,0 +1,289 @@
+/* Reset and Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+  line-height: 1.6;
+}
+
+a {
+  color: #0066cc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #0052a3;
+  text-decoration: underline;
+}
+
+/* Portfolio Container Layout */
+.portfolio-container {
+  display: flex;
+  min-height: 100vh;
+  background-color: #fff;
+}
+
+/* Sidebar Styles */
+.sidebar {
+  width: 280px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 2rem 1.5rem;
+  position: fixed;
+  height: 100vh;
+  overflow-y: auto;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-header {
+  margin-bottom: 2rem;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+  padding-bottom: 1.5rem;
+}
+
+.sidebar-header h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  color: #ffffff;
+}
+
+.sidebar-header p {
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.sidebar-header a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.sidebar-header a:hover {
+  color: #fff9e6;
+  text-decoration: underline;
+}
+
+/* Navigation Styles */
+.sidebar nav ul {
+  list-style: none;
+}
+
+.sidebar nav li {
+  margin: 1rem 0;
+}
+
+.sidebar nav a {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1rem;
+  font-weight: 500;
+  display: block;
+  padding: 0.75rem 1rem;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.sidebar nav a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* Main Content Area */
+.main-content {
+  flex: 1;
+  margin-left: 280px;
+  padding: 3rem;
+  max-width: 900px;
+}
+
+/* Section Styles */
+section {
+  margin-bottom: 3rem;
+  scroll-margin-top: 20px;
+}
+
+section h1 {
+  font-size: 2.5rem;
+  color: #667eea;
+  margin-bottom: 1rem;
+  border-bottom: 3px solid #667eea;
+  padding-bottom: 0.5rem;
+}
+
+section h2 {
+  font-size: 1.6rem;
+  color: #764ba2;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+section h3 {
+  font-size: 1.2rem;
+  color: #333;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+section p {
+  margin-bottom: 1rem;
+  color: #555;
+}
+
+section ul {
+  margin-left: 2rem;
+  margin-bottom: 1rem;
+}
+
+section li {
+  margin-bottom: 0.5rem;
+  color: #555;
+}
+
+/* Experience Items */
+.exp-item {
+  background-color: #f9f9f9;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-left: 4px solid #667eea;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.exp-item:hover {
+  background-color: #f0f0f0;
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.1);
+}
+
+.exp-item strong {
+  color: #667eea;
+}
+
+.exp-item em {
+  color: #999;
+  font-size: 0.9rem;
+}
+
+/* Project Items */
+.project-item {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid #667eea;
+  transition: all 0.3s ease;
+}
+
+.project-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
+}
+
+.project-item h3 {
+  color: #667eea;
+}
+
+.project-item p {
+  margin-bottom: 0.75rem;
+}
+
+/* Contact Info */
+.contact-info {
+  background-color: #f9f9f9;
+  padding: 2rem;
+  border-radius: 8px;
+  border: 2px solid #667eea;
+}
+
+.contact-info p {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.contact-info a {
+  color: #667eea;
+  font-weight: 600;
+}
+
+.contact-info a:hover {
+  color: #764ba2;
+}
+
+/* Home Section */
+#home {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+#home p {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .portfolio-container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    position: static;
+    width: 100%;
+    height: auto;
+    padding: 1.5rem;
+  }
+
+  .main-content {
+    margin-left: 0;
+    padding: 1.5rem;
+  }
+
+  section h1 {
+    font-size: 2rem;
+  }
+
+  section h2 {
+    font-size: 1.4rem;
+  }
+
+  .sidebar nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .sidebar nav li {
+    margin: 0;
+  }
+
+  .sidebar nav a {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-content {
+    padding: 1rem;
+  }
+
+  section h1 {
+    font-size: 1.5rem;
+  }
+
+  section h2 {
+    font-size: 1.2rem;
+  }
+
+  .exp-item,
+  .project-item {
+    padding: 1rem;
+  }
+}
